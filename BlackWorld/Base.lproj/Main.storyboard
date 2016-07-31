@@ -24,25 +24,6 @@
             </objects>
             <point key="canvasLocation" x="-103" y="1242"/>
         </scene>
-        <!--黑暗之源-->
-        <scene sceneID="TxE-6L-Bfh">
-            <objects>
-                <viewController id="Mba-DJ-xJ7" customClass="Tab2Controller" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6bL-sa-i2o"/>
-                        <viewControllerLayoutGuide type="bottom" id="AfK-uh-Eq1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HM6-tI-8L2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="黑暗之源" id="SWs-VD-2wY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cj1-BW-dKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="717" y="674"/>
-        </scene>
         <!--黑暗世界-->
         <scene sceneID="QcK-6f-kDP">
             <objects>
@@ -74,6 +55,52 @@
             </objects>
             <point key="canvasLocation" x="717" y="13"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="3Bi-zT-ML4">
+            <objects>
+                <tableViewController id="V5A-gO-gfH" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6V4-nj-roP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="h5S-Px-EUR">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h5S-Px-EUR" id="63n-hw-6Ye">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="V5A-gO-gfH" id="6O8-N8-DY4"/>
+                            <outlet property="delegate" destination="V5A-gO-gfH" id="9zS-bL-Rwe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="iLg-N7-t6v"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzh-Jb-od4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550" y="709"/>
+        </scene>
+        <!--黑暗之源-->
+        <scene sceneID="kbe-wp-0cT">
+            <objects>
+                <navigationController id="ZqY-hJ-nOi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="黑暗之源" id="f18-L9-HHM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I3U-MT-5VF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="V5A-gO-gfH" kind="relationship" relationship="rootViewController" id="QLr-Ez-e4G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1H2-WE-gv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="709"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="eCw-FF-LPa">
             <objects>
@@ -86,7 +113,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="pDn-oL-dje" kind="relationship" relationship="viewControllers" id="xJY-lU-0pB"/>
-                        <segue destination="Mba-DJ-xJ7" kind="relationship" relationship="viewControllers" id="BtS-DJ-UUf"/>
+                        <segue destination="ZqY-hJ-nOi" kind="relationship" relationship="viewControllers" id="OX1-gQ-bth"/>
                         <segue destination="rzl-Nm-zfY" kind="relationship" relationship="viewControllers" id="Ogd-ry-N30"/>
                     </connections>
                 </tabBarController>
