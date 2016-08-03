@@ -16,6 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tabBar setBarStyle:UIBarStyleBlack];
+    [[UITabBar appearance] setTranslucent:YES];
+    [self.tabBar setTintColor:[UIColor whiteColor]];
+    
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     // Do any additional setup after loading the view.
 }
 

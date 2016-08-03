@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3YC-wa-IpE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,9 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="zSo-9D-zrs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9PX-Ku-Oze">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9PX-Ku-Oze" secondAttribute="trailing" id="1X1-SY-3s8"/>
+                            <constraint firstItem="9PX-Ku-Oze" firstAttribute="top" secondItem="zSo-9D-zrs" secondAttribute="top" id="21Z-4d-BPe"/>
+                            <constraint firstAttribute="bottom" secondItem="9PX-Ku-Oze" secondAttribute="bottom" id="d91-QY-Mec"/>
+                            <constraint firstItem="9PX-Ku-Oze" firstAttribute="leading" secondItem="zSo-9D-zrs" secondAttribute="leading" id="prf-fb-feh"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="黑暗之光" id="vXY-H4-6M3"/>
+                    <tabBarItem key="tabBarItem" title="黑暗之光" image="tab3" id="vXY-H4-6M3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egq-01-iRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,7 +60,10 @@
                             <constraint firstAttribute="trailing" secondItem="HJA-3V-gTA" secondAttribute="trailing" id="Vqc-If-6V2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="黑暗世界" id="4YD-LC-Nxd"/>
+                    <tabBarItem key="tabBarItem" title="黑暗世界" image="tab1" id="4YD-LC-Nxd"/>
+                    <connections>
+                        <outlet property="table" destination="HJA-3V-gTA" id="mv0-aS-oK9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGd-64-8Hp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,7 +73,7 @@
         <scene sceneID="kbe-wp-0cT">
             <objects>
                 <navigationController id="ZqY-hJ-nOi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="黑暗之源" id="f18-L9-HHM"/>
+                    <tabBarItem key="tabBarItem" title="黑暗之源" image="tab2" id="f18-L9-HHM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="I3U-MT-5VF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -83,7 +97,18 @@
                     <view key="view" contentMode="scaleToFill" id="uOj-7J-p8t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dne-xg-Bb9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dne-xg-Bb9" secondAttribute="trailing" id="9Xo-65-rDH"/>
+                            <constraint firstItem="dne-xg-Bb9" firstAttribute="top" secondItem="uOj-7J-p8t" secondAttribute="top" id="ZgU-xe-ci4"/>
+                            <constraint firstItem="dne-xg-Bb9" firstAttribute="leading" secondItem="uOj-7J-p8t" secondAttribute="leading" id="d0N-LK-Ptw"/>
+                            <constraint firstAttribute="bottom" secondItem="dne-xg-Bb9" secondAttribute="bottom" id="lVM-HH-n4W"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ahV-bA-YlW"/>
                 </viewController>
@@ -112,4 +137,11 @@
             <point key="canvasLocation" x="-103" y="344"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="b2.jpg" width="640" height="1136"/>
+        <image name="b3.jpg" width="720" height="1280"/>
+        <image name="tab1" width="36" height="25"/>
+        <image name="tab2" width="25" height="25"/>
+        <image name="tab3" width="25" height="25"/>
+    </resources>
 </document>

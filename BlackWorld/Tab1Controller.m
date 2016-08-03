@@ -13,9 +13,13 @@
 @end
 
 @implementation Tab1Controller
+@synthesize table;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ 
+    table.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"b1.jpg"]];
     // Do any additional setup after loading the view.
 }
 
